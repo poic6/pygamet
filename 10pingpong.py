@@ -6,6 +6,11 @@ SCREEN_HEIGHT = 640
 
 FPS = 60
 
+class Ball():
+    def __init__(self, bounce_sound):
+        self.rect = pygame.Rect(int(SCREEN_WIDTH / 2), int(SCREEN_HEIGHT / 2), 12, 12)
+
+
 def main():
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
