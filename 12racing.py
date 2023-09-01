@@ -39,7 +39,7 @@ class Car():
     def load_image(self):
         choice_car_path = random.choice(self.image_path_list)
         self.image = pygame.image.load(choice_car_path)
-        self.rect = self.image.get_rect()
+        #self.rect = self.image.get_rect()
         self.width = self.image.get_rect().width
         self.height = self.image.get_rect().height
 
@@ -107,7 +107,7 @@ class Lane():
     def draw(self, screen):
         next_lane = self.y
         for i in range(self.count):
-            pygame.draw.rect(screen, self.color, [self.x, next_lane, self.width, self.height])
+            pygame.draw.rect(screen, self.color, (self.x, next_lane, self.width, self.height))
             next_lane += self.height + self.gap
 
 class Game():
